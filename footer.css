@@ -1,0 +1,5 @@
+.site-footer { background:#02102a; color:#cfe3ff; padding:1.25rem 0; width:100% }
+.footer-inner { max-width: none; margin:0; padding:0 1rem; display:flex; gap:1rem; align-items:center; justify-content:space-between; width:100% }
+.footer-inner p { margin:0 }
+.footer-inner .footer-links { display:flex; gap:1rem }
+.footer-inner .footer-links a { color:#bcd9ff; text-decoration:none }

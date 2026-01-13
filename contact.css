@@ -1,0 +1,5 @@
+.contact { padding:4rem 2rem; width:100%; box-sizing:border-box }
+.contact h1 { font-size:2rem; margin-bottom:0.5rem }
+.contact p { max-width:none; margin-bottom:1rem }
+.contact address { background:#fff; padding:1.25rem; border-radius:8px; box-shadow:0 10px 30px rgba(13,35,77,0.06); max-width:none; width:100%; box-sizing:border-box }
+.container-inner.full-bleed { padding-left: 2rem; padding-right: 2rem }

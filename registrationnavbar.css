@@ -1,0 +1,74 @@
+
+.registration-nav {
+  background: linear-gradient(180deg,#f3f4f6 0%, #e9eef2 100%);
+  border-bottom: 1px solid #d6dbe0;
+  position: sticky;
+  top:var(--main-nav-height,64px);
+  z-index:90;
+  box-shadow: 0 4px 16px rgba(6,22,46,0.03);
+}
+.reg-menu-inner {
+  max-width: none;
+  margin: 0;
+  padding: 0.5rem 1rem;
+  position: relative;
+  width: 100%;
+}
+.reg-menu-list {
+  display:flex;
+  gap:0.75rem;
+  list-style:none;
+  margin:0;
+  padding:0.25rem 0;
+  align-items:center;
+  justify-content:center;
+  overflow:auto;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x mandatory;
+}
+.reg-menu-list li { scroll-snap-align: start }
+.reg-menu-list a {
+  color:#0b62d1;
+  text-decoration:none;
+  padding:0.6rem 0.9rem;
+  border-radius:9999px;
+  font-weight:600;
+  display:inline-flex;
+  align-items:center;
+  gap:0.5rem;
+  transition: all 160ms ease;
+  border: 1px solid transparent;
+}
+.reg-menu-list a:focus { outline: 3px solid rgba(11,98,209,0.12); outline-offset: 2px }
+.reg-menu-list a:hover { background: rgba(11,98,209,0.06); transform: translateY(-2px); box-shadow: 0 8px 20px rgba(11,98,209,0.06) }
+.reg-menu-list a.active,
+.reg-menu-list a[aria-current="page"] {
+  background: #0b62d1;
+  color: #fff;
+  box-shadow: 0 8px 22px rgba(11,98,209,0.12);
+  border-color: rgba(11,98,209,0.12);
+}
+.reg-menu-inner:before,
+.reg-menu-inner:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 3rem;
+  pointer-events: none;
+}
+.reg-menu-inner:before { left: 0; background: linear-gradient(90deg, rgba(233,238,242,1) 0%, rgba(233,238,242,0) 100%) }
+.reg-menu-inner:after { right: 0; background: linear-gradient(270deg, rgba(233,238,242,1) 0%, rgba(233,238,242,0) 100%) }
+
+.program-wrapper { display:inline-block }
+.program-item a { font-weight:800 }
+
+@media (max-width:900px) {
+  .reg-menu-inner { padding:0.5rem 1rem }
+  .reg-menu-list { gap:0.5rem }
+}
+
+@media (max-width:560px) {
+  .reg-menu-list { justify-content:flex-start; padding-left:4px }
+  .reg-menu-inner:before, .reg-menu-inner:after { display:none }
+}
